@@ -1,45 +1,45 @@
-#全息投影仪驱动程序
-####快速创建物体，并支持移动，旋转，缩放
-##API:
+# 全息投影仪驱动程序
+#### 快速创建物体，并支持移动，旋转，缩放
+## API:
 
-####1、IHologram:initialize(number size)
+#### 1、IHologram:initialize(number size)
 
 初始化投影仪
 
 size:缩放倍数(即hologram.setScale(scale))
 
-####2、IVector3:new(x,y,z)
+#### 2、IVector3:new(x,y,z)
 
 创建一个3维向量
 
-####3、Cube:create(IVector3 position, IVector3 size, number color)
+#### 3、Cube:create(IVector3 position, IVector3 size, number color)
 
 创建一个长方体，返回的是object对象
 
-####4、object:group(Object otherObject)
+#### 4、object:group(Object otherObject)
 
 将2个物体组合成1个物体,并存储在object对象里
 
-####5、object:setAbsAnchor(IVector3 pos or x, y, z)
+#### 5、object:setAbsAnchor(IVector3 pos or x, y, z)
 
 设置物体的锚点（一般旋转时用）,传入的坐标应该为世界坐标
 
-####6、旋转：
+#### 6、旋转：
 object:setRotation(IVector3 verctor3 or x, y, z)
 object:setRotationX(number x)
 object:setRotationY(number y)
 object:setRotationZ(number z)
 
-####7、平移：
+#### 7、平移：
 object:setPosition(IVector3 verctor3 or x, y, z)
 
-####8、缩放：
+#### 8、缩放：
 object:setScale(IVector3 verctor3 or x, y, z)
 
-####9、销毁该物体：
+#### 9、销毁该物体：
 object:clear()
 
-#使用例子
+# 使用例子
 ````lua
 local H = require("IHologram")
 
